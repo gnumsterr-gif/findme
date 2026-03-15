@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klonvision / Gnum — Garena Russian DotA Room 3 | DotA Warcraft, Iccup</title>
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="description" content="Klonvision / Gnum — визитка. Ищу старых друзей, в т.ч. из Гарены Garena Russian DotA Room 3, Iccup, Warcraft DotA.">
+  <meta name="keywords" content="Klonvision, Gnum, pro-URSA-1997, Garena, Russian DotA Room 3, rdr3, DotA, Warcraft, Iccup, festuu, wkeme, yonki, pihta, sayLolka, mdma zanadlo, mdma shilo, SabidJAme, Davo, soch1_ara, Nibilung, boroga, mell0w, JloWadKa, Zurum, AleshQa, Hate.Prigovor, zxc[sqrd], c-ritree, mric.ds, lebron_James, StoryOff, BluFF_oO, strog0_pohy1, Cl.areDa.or3x, drimascus, Dovolno, XOPC, Just_Pan, Lioo, lynf1, ironman_mc, Bopishka, maffiee, FraggMe, k4bZ, 1st-GhoST, tepu AureL, Attila RUS, stan.bro, W.T^PriZraK, Serejka.H_S, Pestato, SnowTower, Bios_07, -cyberlink, igogo, FokuS-_-, Asus.Rage, World4you">
+  <meta property="og:title" content="Klonvision / Gnum — Garena Russian DotA Room 3, Iccup">
+  <meta property="og:description" content="Сайт визитка на всякий случай. Старые друзья, в т.ч. из Гарены Russian DotA Room 3: если помнишь Klonvision или pro-URSA-1997 — пишите!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://klonvision.top">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <meta name="theme-color" content="#0a0a08">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a08;
+      color: #c8b88a;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .vid-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+    .vid-bg video { width: 100%; height: 100%; object-fit: cover; }
+
+    .page-layout {
+      position: relative; z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      padding: 60px 20px 80px;
+    }
+
+    .hero-section {
+      grid-column: 2; grid-row: 1;
+      text-align: center; padding-bottom: 24px;
+    }
+
+    .container {
+      grid-column: 2; grid-row: 2;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar-right {
+      grid-column: 3; grid-row: 2;
+      padding-left: 20px;
+    }
+
+    .garena-block { border-radius: 4px; position: sticky; top: 20px; }
+    .garena-block .wc3-inner { padding: 22px 24px; }
+
+    .garena-title {
+      font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700;
+      color: #d4a940; text-align: center; margin-bottom: 16px; line-height: 1.3;
+      text-shadow: 0 0 12px rgba(212,169,64,0.2), 0 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .garena-text { font-size: 0.88rem; line-height: 1.7; color: #c8b88a; margin-bottom: 16px; }
+    .garena-text p + p { margin-top: 12px; }
+
+    .garena-nicks {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.76rem;
+      line-height: 2; color: #8ab4f0; word-break: break-word;
+    }
+    .garena-nicks .nick { white-space: nowrap; }
+
+    /* ===== HEADER ===== */
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-weight: 700; text-align: center;
+      letter-spacing: 0.02em; line-height: 1.2;
+      margin-bottom: 8px; color: #d4a940;
+      text-shadow: 0 0 20px rgba(212,169,64,0.3), 0 2px 4px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.5);
+    }
+
+    .hero-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 400;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      text-align: center; color: rgba(200,184,138,0.6);
+      margin-bottom: 0; letter-spacing: 0.04em;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+    }
+
+    /* ===== WC3 FRAME ===== */
+    .wc3-frame {
+      padding: 14px; border: 2px solid #0e0e08;
+      outline: 1px solid #3a3630; outline-offset: -3px;
+      background:
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) left center,
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) right center,
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) center top,
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) center bottom,
+        linear-gradient(180deg, #3a3830 0%, #2e2c24 20%, #22201a 50%, #2a2820 80%, #343028 100%);
+      background-size: 14px 32px, 14px 32px, 32px 14px, 32px 14px, 100% 100%;
+      background-repeat: repeat-y, repeat-y, repeat-x, repeat-x, no-repeat;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.5), 0 0 0 1px #0a0a06, 0 4px 20px rgba(0,0,0,0.7);
+    }
+
+    .wc3-inner {
+      background: linear-gradient(180deg, #182a52 0%, #0e1a38 40%, #101e42 70%, #162850 100%);
+      border: 2px solid #1e3a78;
+      box-shadow: inset 0 0 12px rgba(30,58,120,0.25);
+      padding: 22px 26px;
+    }
+
+    /* ===== VIDEO CARD ===== */
+    .video-card { border-radius: 4px; overflow: hidden; margin-bottom: 0; position: relative; }
+    .video-card video { display: block; width: 100%; border: 2px solid #1e3a78; }
+
+    /* ===== MUSIC PLAYER ===== */
+    .music-player {
+      margin-bottom: 24px; border-radius: 4px;
+    }
+    .music-player .wc3-inner {
+      padding: 12px 20px;
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    .music-title {
+      font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 600;
+      color: #d4a940; white-space: nowrap; flex-shrink: 0;
+    }
+    .music-controls {
+      display: flex; gap: 6px; flex-shrink: 0;
+    }
+    .music-controls button {
+      width: 32px; height: 32px; border: 2px solid #3a362c; border-radius: 2px;
+      background: linear-gradient(180deg, #3a362c, #2a2820);
+      color: #d4a940; font-size: 1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; padding: 0;
+    }
+    .music-controls button:hover {
+      background: linear-gradient(180deg, #4a4638, #3a362c);
+    }
+    .music-track-name {
+      font-size: 0.78rem; color: #8ab4f0; flex: 1; min-width: 0;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+
+    /* ===== INFO CARD ===== */
+    .info-card { border-radius: 4px; margin-bottom: 20px; font-size: 0.92rem; line-height: 1.7; color: #c8b88a; }
+    .info-card .wc3-inner {
+      padding: 0; display: flex; overflow: hidden;
+    }
+    .info-card .info-text {
+      padding: 22px 24px; flex: 1; min-width: 0;
+    }
+    .info-card .info-img {
+      flex-shrink: 0; width: 200px;
+    }
+    .info-card .info-img img {
+      display: block; width: 100%; height: 100%; object-fit: cover;
+    }
+    .info-card p + p { margin-top: 14px; }
+
+    /* ===== EXPANDABLE BLOCKS ===== */
+    .expand-block {
+      border-radius: 4px; margin-bottom: 18px; overflow: hidden;
+      cursor: pointer; user-select: none; position: relative;
+      transition: box-shadow 0.3s ease;
+    }
+    .expand-block:hover {
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.5), 0 0 0 1px #0a0a06, 0 0 16px rgba(40,85,160,0.2), 0 6px 28px rgba(0,0,0,0.7);
+    }
+    .expand-block:hover .expand-header { box-shadow: inset 0 0 20px rgba(40,85,160,0.3); }
+
+    .expand-header {
+      padding: 18px 24px; display: flex; align-items: center; justify-content: center;
+      position: relative; z-index: 2;
+      background: linear-gradient(180deg, #1a2e56 0%, #0e1a38 50%, #142448 100%);
+      border: 2px solid #1e3a78; border-bottom: none;
+      box-shadow: inset 0 0 12px rgba(30,58,120,0.2);
+    }
+    .expand-header-text {
+      font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 600;
+      color: #d4a940; text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 0 12px rgba(212,169,64,0.15);
+      line-height: 1.4; text-align: center; flex: 1;
+    }
+    .expand-arrow {
+      width: 24px; height: 24px; border-radius: 2px;
+      background: rgba(30,58,120,0.3); border: 1px solid #2a4a80;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-left: 14px;
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), background 0.3s;
+    }
+    .expand-arrow svg {
+      width: 12px; height: 12px; fill: none; stroke: #d4a940;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .expand-block.open .expand-arrow svg { transform: rotate(180deg); }
+
+    .expand-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1); }
+    .expand-content-inner {
+      padding: 12px 24px 22px; color: #c8b88a;
+      background: linear-gradient(180deg, #0e1a38 0%, #101e42 100%);
+      border: 2px solid #1e3a78; border-top: 1px solid rgba(30,58,120,0.4);
+      box-shadow: inset 0 0 10px rgba(30,58,120,0.15);
+    }
+
+    .block-purple, .block-orange, .block-blue {
+      padding: 14px; border: 2px solid #0e0e08;
+      outline: 1px solid #3a3630; outline-offset: -3px;
+      background:
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) left center,
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) right center,
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) center top,
+        radial-gradient(circle 3.5px, #0e0e08 0%, #0e0e08 1.2px, #3d3828 1.3px, #3d3828 2.5px, transparent 3px) center bottom,
+        linear-gradient(180deg, #3a3830 0%, #2e2c24 20%, #22201a 50%, #2a2820 80%, #343028 100%);
+      background-size: 14px 32px, 14px 32px, 32px 14px, 32px 14px, 100% 100%;
+      background-repeat: repeat-y, repeat-y, repeat-x, repeat-x, no-repeat;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.5), 0 0 0 1px #0a0a06, 0 4px 20px rgba(0,0,0,0.7);
+      animation: none;
+    }
+
+    /* ===== PASSWORD FORM ===== */
+    .password-gate { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; padding-top: 16px; }
+    .password-gate label { font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 600; color: #d4a940; }
+    .password-row { display: flex; gap: 10px; width: 100%; }
+    .password-gate input {
+      flex: 1; padding: 10px 16px; border: 2px solid #1e3a78; border-radius: 2px;
+      font-size: 0.95rem; font-family: 'JetBrains Mono', monospace;
+      background: rgba(14,26,56,0.8); color: #c8b88a; outline: none;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .password-gate input::placeholder { color: rgba(200,184,138,0.35); }
+    .password-gate input:focus { border-color: #3060b0; background: rgba(14,26,56,1); }
+
+    .password-gate button, .msg-form button {
+      padding: 10px 20px; border: 2px solid #3a362c; border-radius: 2px;
+      background: linear-gradient(180deg, #3a362c, #2a2820); color: #d4a940;
+      font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.1s;
+      white-space: nowrap; text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+    .password-gate button:hover, .msg-form button:hover:not(:disabled) {
+      background: linear-gradient(180deg, #4a4638, #3a362c); border-color: #5a5648;
+    }
+    .msg-form button:active:not(:disabled) { transform: scale(0.97); }
+    .msg-form button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .password-error {
+      font-size: 0.85rem; color: #e06040; background: rgba(224,96,64,0.1);
+      border: 1px solid rgba(224,96,64,0.3); padding: 6px 12px; border-radius: 2px; display: none;
+    }
+
+    /* ===== CONTACTS LIST ===== */
+    .contacts-list { list-style: none; display: flex; flex-direction: column; gap: 14px; padding-top: 16px; }
+    .contacts-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; font-size: 0.95rem; line-height: 1.5; }
+    .contact-label { font-weight: 600; color: #d4a940; flex-shrink: 0; }
+    .contacts-list a { color: #8ab4f0; text-decoration: none; border-bottom: 1px solid rgba(138,180,240,0.3); transition: color 0.2s, border-color 0.2s; font-weight: 500; }
+    .contacts-list a:hover { color: #b0d0ff; border-color: #b0d0ff; }
+    .contact-note { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: rgba(200,184,138,0.5); font-weight: 400; }
+
+    /* ===== MESSAGE FORM ===== */
+    .form-intro { margin-bottom: 16px; border-radius: 4px; font-size: 0.92rem; line-height: 1.7; color: #c8b88a; }
+    .form-intro .wc3-inner { padding: 22px 26px; }
+
+    .msg-form { display: flex; flex-direction: column; gap: 14px; padding-top: 16px; }
+    .msg-form label { font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 600; color: #d4a940; margin-bottom: -6px; }
+    .msg-form input, .msg-form textarea {
+      width: 100%; padding: 12px 16px; border: 2px solid #1e3a78; border-radius: 2px;
+      font-size: 0.95rem; font-family: 'Inter', sans-serif;
+      background: rgba(14,26,56,0.8); color: #c8b88a; outline: none;
+      transition: border-color 0.3s, background 0.3s; resize: vertical;
+    }
+    .msg-form input::placeholder, .msg-form textarea::placeholder { color: rgba(200,184,138,0.3); }
+    .msg-form input:focus, .msg-form textarea:focus { border-color: #3060b0; background: rgba(14,26,56,1); }
+    .msg-form textarea { min-height: 110px; }
+    .msg-form button { align-self: flex-start; padding: 12px 32px; font-size: 0.9rem; }
+
+    .captcha-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .captcha-code {
+      padding: 8px 18px; border: 2px solid #1e3a78; border-radius: 2px;
+      background: rgba(10,16,36,0.9); font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem; font-weight: 700; letter-spacing: 0.3em;
+      color: #d4a940; user-select: none; text-shadow: 0 0 8px rgba(212,169,64,0.3);
+      position: relative; overflow: hidden;
+    }
+    .captcha-code::before {
+      content: ''; position: absolute; inset: 0;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 6px, rgba(30,58,120,0.15) 6px, rgba(30,58,120,0.15) 8px);
+    }
+    .captcha-refresh {
+      width: 32px; height: 32px; border: 2px solid #3a362c; border-radius: 2px;
+      background: linear-gradient(180deg, #3a362c, #2a2820); color: #d4a940;
+      font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s; padding: 0;
+    }
+    .captcha-refresh:hover { background: linear-gradient(180deg, #4a4638, #3a362c); }
+    .captcha-row input { flex: 1; min-width: 100px; max-width: 160px; }
+
+    .form-status { font-size: 0.9rem; padding: 8px 14px; border-radius: 2px; display: none; }
+    .form-status.success { display: block; background: rgba(80,180,80,0.15); border: 1px solid rgba(80,180,80,0.3); color: #80c880; }
+    .form-status.error { display: block; background: rgba(224,96,64,0.1); border: 1px solid rgba(224,96,64,0.3); color: #e08060; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+      }
+      .hero-section { grid-column: 1; grid-row: 1; }
+      .container { grid-column: 1; grid-row: 2; max-width: 720px; margin: 0 auto; width: 100%; }
+      .sidebar-right {
+        grid-column: 1; grid-row: 3;
+        padding-left: 0; padding-top: 24px;
+        max-width: 720px; margin: 0 auto; width: 100%;
+      }
+      .garena-block { position: static; }
+    }
+
+    @media (max-width: 520px) {
+      .page-layout { padding: 36px 12px 60px; }
+      .expand-header { padding: 14px 18px; }
+      .expand-content-inner { padding: 10px 18px 18px; }
+      .wc3-frame { padding: 10px; }
+      .wc3-inner { padding: 18px; }
+      .password-row { flex-direction: column; }
+      .captcha-row { flex-direction: column; align-items: flex-start; }
+      .captcha-row input { max-width: 100%; }
+      .info-card .wc3-inner { flex-direction: column; }
+      .info-card .info-img { width: 100%; height: 200px; }
+      .music-player .wc3-inner { gap: 10px; }
+      .music-track-name { width: 100%; flex: unset; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Klonvision",
+    "alternateName": ["Gnum", "pro-URSA-1997"],
+    "url": "https://klonvision.top",
+    "description": "Garena Russian DotA Room 3, Iccup, DotA Warcraft player. Ищу старых друзей из Гарены."
+  }
+  </script>
+</head>
+
+<body>
+
+  <div class="vid-bg">
+    <video autoplay muted loop playsinline>
+      <source src="Warcraft 3 Reign of Chaos 2002.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="page-layout">
+
+    <div class="hero-section">
+      <h1 class="hero-title">Привет, это Klonvision / Gnum!</h1>
+      <p class="hero-quote">"After all this time? Always."</p>
+    </div>
+
+    <div class="container">
+
+    <!-- VIDEO -->
+    <div class="video-card wc3-frame">
+      <video autoplay muted loop playsinline controls>
+        <source src="sposebaabakan.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- MUSIC PLAYER -->
+    <div class="music-player wc3-frame">
+      <div class="wc3-inner">
+        <span class="music-title">Да будет музыка!</span>
+        <div class="music-controls">
+          <button onclick="musicPrev()" title="Предыдущий">⏮</button>
+          <button onclick="musicToggle()" id="music-play-btn" title="Играть">▶</button>
+          <button onclick="musicNext()" title="Следующий">⏭</button>
+        </div>
+        <span class="music-track-name" id="music-track-name">—</span>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="info-card wc3-frame">
+      <div class="wc3-inner">
+        <div class="info-text">
+          <p>Klonvision из Garena Russian Dota Room 3 — это тоже я (буду рад пообщаться с людьми из тех времён) :)</p>
+          <p>Этот сайт создан, чтобы со мной или семьёй всегда могли пообщаться те, кто помнит или вспомнит. Давайте не будем терять друг друга из-за всяких блокировок.</p>
+          <p>Контакты могут обновляться, но сайт будет работать всегда, если не работает — то в любом случае позже будет работать (могут быть неполадки или пробуйте обходы, а лучше записывайте контакты). В будущем здесь могут появиться прямые контакты и даже блог, так как следить в мессенджерах кому-то может быть нереально.</p>
+        </div>
+        <div class="info-img">
+          <img src="catme.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCK 1: password protected -->
+    <div class="expand-block block-purple" id="block-private" onclick="toggleBlock(this)">
+      <div class="expand-header">
+        <span class="expand-header-text">Мои/наши контакты для самых близких (нажми сюда)</span>
+        <span class="expand-arrow"><svg viewBox="0 0 12 8"><path d="M1 1.5L6 6.5L11 1.5"/></svg></span>
+      </div>
+      <div class="expand-content" id="private-content">
+        <div class="expand-content-inner">
+          <div class="password-gate" id="private-gate">
+            <label>Введите пароль:</label>
+            <div class="password-row">
+              <input type="password" id="private-pass" placeholder="••••••" autocomplete="off"
+                     onkeydown="if(event.key==='Enter'){checkPassword(); event.stopPropagation()}"
+                     onclick="event.stopPropagation()">
+              <button onclick="event.stopPropagation(); checkPassword()">Войти</button>
+            </div>
+            <div class="password-error" id="private-error">Неверный пароль</div>
+          </div>
+          <div id="private-contacts" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCK 2: no password -->
+    <div class="expand-block block-orange" id="block-public" onclick="toggleBlock(this)">
+      <div class="expand-header">
+        <span class="expand-header-text">Мои контакты для тех, кто вдруг меня вспомнил (нажми сюда)</span>
+        <span class="expand-arrow"><svg viewBox="0 0 12 8"><path d="M1 1.5L6 6.5L11 1.5"/></svg></span>
+      </div>
+      <div class="expand-content">
+        <div class="expand-content-inner">
+          <div id="public-contacts"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTRO TEXT ABOVE FORM -->
+    <div class="form-intro wc3-frame">
+      <div class="wc3-inner">
+        <p>Ниже в блоке 👇 — ты сможешь отправить мне сообщение и я свяжусь с тобой по контакту, который ты укажешь (не забудь указать в сообщении свои контакты). Если ты отправил(а) сообщение, прошла неделя и нет ответа — попробуй ещё (могу не заметить).</p>
+      </div>
+    </div>
+
+    <!-- BLOCK 3: message form -->
+    <div class="expand-block block-blue" id="block-message" onclick="toggleBlock(this)">
+      <div class="expand-header">
+        <span class="expand-header-text">Отправить мне сообщение</span>
+        <span class="expand-arrow"><svg viewBox="0 0 12 8"><path d="M1 1.5L6 6.5L11 1.5"/></svg></span>
+      </div>
+      <div class="expand-content">
+        <div class="expand-content-inner">
+          <form class="msg-form" id="contact-form" onsubmit="return false" onclick="event.stopPropagation()">
+            <label for="msg-name">Кто ты?</label>
+            <input type="text" id="msg-name" name="name" required placeholder="можно и не одним словом">
+            <label for="msg-text">Сообщение</label>
+            <textarea id="msg-text" name="message" required placeholder="укажи, как я могу с тобой связаться, контакты, хотя бы парочку, а можешь вообще письмо состряпать :)"></textarea>
+            <label>Введи код с картинки</label>
+            <div class="captcha-row">
+              <span class="captcha-code" id="captcha-display"></span>
+              <button type="button" class="captcha-refresh" onclick="event.stopPropagation(); generateCaptcha()" title="Новый код">&#8635;</button>
+              <input type="text" id="captcha-input" autocomplete="off" placeholder="код" onclick="event.stopPropagation()">
+            </div>
+            <button type="button" id="send-btn" onclick="event.stopPropagation(); sendMessage()">Отправить</button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <aside class="sidebar-right">
+    <section class="garena-block wc3-frame" itemscope itemtype="https://schema.org/Article">
+      <div class="wc3-inner">
+        <h2 class="garena-title" itemprop="headline">DotA Warcraft &middot; Garena Russian DotA Room 3</h2>
+        <div class="garena-text" itemprop="articleBody">
+          <p>Примерно с 2007г я под ником <strong>Klonvision</strong> (и позже фейком <strong>pro-URSA-1997</strong>) очень активно играл в Доту (<strong>DotA Warcraft</strong>) и завёл в Гарене <strong>Russian DotA Room 3</strong> много знакомых, друзей. Потом был <strong>Iccup</strong>, потерялось 80% знакомств, а спустя время, году так в 2014 перестал играть и я (разве что редко, да и уже было не с кем). Но то что было, Гарена — это были клёвые времена, ребята, и я благодарен за то, что это было с вами. Так что если кто-то из вас нагуглит моё имя, вспомнит — буду рад пообщаться, всех помню! Может мы даже сможем ещё поиграть, почему нет?)</p>
+          <p><strong>К примеру, каких людей я помню</strong> (всех увы не вспомнишь, так что если ты себя не нашёл — всё равно стучись):</p>
+        </div>
+        <p class="garena-nicks"><span class="nick">festuu</span>, <span class="nick">wkeme</span>, <span class="nick">yonki</span>, <span class="nick">pihta</span>, <span class="nick">sayLolka</span>, <span class="nick">mdma)zanadlo</span>, <span class="nick">mdma)shilo</span>, <span class="nick">SabidJAme</span>, <span class="nick">Davo</span>, <span class="nick">soch1_ara</span>, <span class="nick">Nibilung</span>, <span class="nick">boroga</span>, <span class="nick">mell0w</span>, <span class="nick">JloWadKa</span>, <span class="nick">Zurum</span>, <span class="nick">AleshQa</span>, <span class="nick">Hate.Prigovor</span>, <span class="nick">zxc[sqrd]</span>, <span class="nick">c-ritree</span>, <span class="nick">mric.ds</span>, <span class="nick">lebron_James</span>, <span class="nick">StoryOff</span>, <span class="nick">BluFF_oO</span>, <span class="nick">strog0_pohy1</span>, <span class="nick">Cl.areDa.or3x</span>, <span class="nick">drimascus</span>, <span class="nick">Dovolno</span>, <span class="nick">XOPC</span>, <span class="nick">Just_Pan</span>, <span class="nick">Lioo</span>, <span class="nick">lynf1</span>, <span class="nick">ironman_mc</span>, <span class="nick">Bopishka</span>, <span class="nick">maffiee</span>, <span class="nick">FraggMe</span>, <span class="nick">k4bZ</span>, <span class="nick">-1st-[GhoST]</span>, <span class="nick">[tepu]_AureL</span>, <span class="nick">Attila(RUS)</span>, <span class="nick">stan.bro</span>, <span class="nick">W.T^PriZraK</span>, <span class="nick">Serejka.H_S</span>, <span class="nick">Pestato</span>, <span class="nick">SnowTower</span>, <span class="nick">Bios_07</span>, <span class="nick">-cyberlink</span>, <span class="nick">igogo^</span>, <span class="nick">FokuS-_-</span>, <span class="nick">Asus.Rage</span>, <span class="nick">World4you</span>, <span class="nick">NightBzz / BzzIsPerfect</span></p>
+      </div>
+    </section>
+  </aside>
+
+  </div>
+
+  <script>
+    /* ===== CONTACTS ===== */
+    function renderContacts(target, items) {
+      var ul = document.createElement('ul');
+      ul.className = 'contacts-list';
+      items.forEach(function(c) {
+        var li = document.createElement('li');
+        var label = document.createElement('span');
+        label.className = 'contact-label';
+        label.textContent = c.label;
+        li.appendChild(label);
+        if (c.href) {
+          var a = document.createElement('a');
+          a.href = c.href;
+          a.textContent = c.text;
+          if (c.href.startsWith('http')) a.target = '_blank';
+          li.appendChild(a);
+        } else {
+          var span = document.createElement('span');
+          span.textContent = c.text;
+          li.appendChild(span);
+        }
+        if (c.note) {
+          var note = document.createElement('span');
+          note.className = 'contact-note';
+          note.textContent = ' ' + c.note;
+          li.appendChild(note);
+        }
+        ul.appendChild(li);
+      });
+      document.getElementById(target).appendChild(ul);
+    }
+
+    (function() {
+      renderContacts('public-contacts', [
+        { label: 'Телеграм: ', text: '@enjoy3r', href: 'https://t.me/enjoy3r' },
+        { label: 'Email: ', text: 'gogo@klonvision.top', href: 'mailto:gogo@klonvision.top' }
+      ]);
+    })();
+
+    /* ===== AES ENCRYPTED PRIVATE CONTACTS ===== */
+    var ENCRYPTED = {
+      salt: 'MRV7lkdioaIKbEBVdUoRGA==',
+      iv:   'qr8gxVmhDWoDtIIh',
+      ct:   '0JMBwmv9PLqb9ci71H5ifukIcmQRwMt3sMd+aUveIOafx/WUgqL8KkkG7RmJ8v2QAKorETqKl9laIFJHpACtU1a/UP4cLiCvdURV6bwHp6YgeXaZfCdiMH0gGwmF8432kavAF99vLpN0kNbgLAZqi4S+ykccZqXTyRmKXwQSDrPGBtlqWAAmNu6rv8OmmNvyNlIsvQt3YCVlv8A4PIytODTGwg1KqqOMveTzvyn93CW94P2P4V75gswS+JvmLSXi6IN4NXDua/5jM9f1uyPT2q5mBnjlqzaYN7ONdilOw3TYyNWBRBUaerGFpw1b1p2Amg/sIaxPYNt8mB/7vFJTyb1Ro49z+Ff7TRzS0Ky3RbM6SLoDO5mGmi5ZBT7cgZ8B+wgAhA42MD8kf92PhvigK/F76dyLcQ66YoTN3lGIIIyetYC5FGMlcmzfcTW0+zlHsWdIUG9vV7A53zYde1khuCtiAGVzquhAEye02UVwq5H6kUm/NMXFFAaaHS/iWFfgRvlxoFxJAHnBv1cEB8/VlT4bx+oK5xhNWi1Ah/p3FYzfpMXpTmNDTF9Fh6/AEQTuZBDFiXjc5t0iAW2StQ97SAOuX7TuMmOQ3DOf/TKmTj4JYmH70HENwddPzXUJnNU1mWt0Ub4qgO+krncJEsj4r5BCsnN4QNNzzzZ0wkdaOiwuX2Tny1qZj/f8eGxCLI8l6kWz9iApbxdyIchPJAwf4tpyKds0LVivuziJfr8I0FHzprX0AdaAqT5Z1qzzpi9xO+PG9w3fjKY015E5Ycc+IzlO7vj+XhTAEtLw9DKvyhBAcev1NLuYmtdXDriptLlKIE7W95HuYRUAfR3jx56r+LZDqAbJ5WpLQ2M917CosbZ1ItDB0NDSj9j+9yngLEMKpldJMBZACA3zYDU9zwyFJXoejlaVq36sGha2v71mzwYw3U79I/yIPt4OiEs5SMg+bwfVnaIuY1rIqIRlSfCASjsvHhbn9pDtuaaZkJv8NUqPa6cjpUq9XNsp0gsb3Eu/vUBVuRUnt/djHAelbp+ApAEx5qUPq+5jrzXQ+YC7oFAUoBR9jSCiTE9A4wAejIwaELaLGLVEOaq+70cZ44VzWH5Jo5kx3VavY9lbIfEvtcwEqFeOE+wWihyxWnq0mVveG0JAuYAU+k7YmSsABzqWMeZyHNix+ODNqpNmEysA7jqjes3mOy7rapGwFRVi5FLhPYJAgGO0bH6Zo6tE7RffLxM1pqEoC4se+elzDPZk8ZZ+7O7OZ5l9V9wHCHshf7GO4CnPhJbrfocYWoXx931LycEE+beoRl6Ol2E7/BNtKUMlT+W9UDLTj3SqkWCzvtnC0kquJsSqxe4bZh4b62wzi1e303s5cbHT9xpwegSsUeQHxDQI5WbZqiPz/7zf04xSwjjSDQXITX6AABhypjoGZOHxWrPiyQiCLQ=='
+    };
+
+    function b64decode(str) {
+      var bin = atob(str); var arr = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+      return arr;
+    }
+
+    async function decryptData(password) {
+      var salt = b64decode(ENCRYPTED.salt), iv = b64decode(ENCRYPTED.iv), ct = b64decode(ENCRYPTED.ct);
+      var keyMaterial = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']);
+      var aesKey = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: salt, iterations: 100000, hash: 'SHA-256' },
+        keyMaterial, { name: 'AES-GCM', length: 256 }, false, ['decrypt']
+      );
+      var decrypted = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: iv }, aesKey, ct);
+      return JSON.parse(new TextDecoder().decode(decrypted));
+    }
+
+    async function checkPassword() {
+      var input = document.getElementById('private-pass');
+      try {
+        var contacts = await decryptData(input.value);
+        document.getElementById('private-gate').style.display = 'none';
+        document.getElementById('private-contacts').style.display = 'block';
+        renderContacts('private-contacts', contacts);
+        var content = document.getElementById('block-private').querySelector('.expand-content');
+        content.style.maxHeight = content.scrollHeight + 200 + 'px';
+      } catch(e) {
+        var err = document.getElementById('private-error');
+        err.style.display = 'block'; input.value = ''; input.focus();
+        setTimeout(function(){ err.style.display = 'none'; }, 2000);
+      }
+    }
+
+    /* ===== EXPAND/COLLAPSE ===== */
+    function toggleBlock(block) {
+      var content = block.querySelector('.expand-content');
+      if (block.classList.contains('open')) {
+        content.style.maxHeight = '0'; block.classList.remove('open');
+      } else {
+        block.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 200 + 'px';
+        setTimeout(function(){ content.style.maxHeight = content.scrollHeight + 200 + 'px'; }, 50);
+      }
+    }
+
+    /* ===== UNMUTE MAIN VIDEO ===== */
+    (function() {
+      var v = document.querySelector('.video-card video');
+      function unmute() {
+        v.muted = false;
+        document.removeEventListener('click', unmute);
+        document.removeEventListener('touchstart', unmute);
+      }
+      document.addEventListener('click', unmute);
+      document.addEventListener('touchstart', unmute);
+    })();
+
+    /* ===== MUSIC PLAYER ===== */
+    var playlist = [
+      'Derek Duke - Reign Of Chaos (Main Title).mp3',
+      'Derek Duke - Dark Covenant (Alliance).mp3',
+      'Tracy W. Bush - DarkAgents.mp3',
+      'Witcher 3 Main Menu Ep1 Theme Credits Usm Edit.mp3',
+      'Resident Evil 7 biohazard (2017) Main Menu.mp3',
+      'Unreal Neo Cairo [Team Orbit\'s UT Modification] Breakdown.mp3',
+      'Unreal Nali Chant.mp3',
+      'Unreal Dusk Horizon.mp3',
+      'Джулиано Каччини - Аве Мария (Орган).mp3'
+    ];
+    var musicIdx = 0;
+    var musicAudio = new Audio();
+    var musicPlaying = false;
+
+    function trackDisplayName(filename) {
+      return filename.replace(/\.mp3$/i, '');
+    }
+
+    function musicUpdateUI() {
+      document.getElementById('music-track-name').textContent = trackDisplayName(playlist[musicIdx]);
+      document.getElementById('music-play-btn').textContent = musicPlaying ? '⏸' : '▶';
+    }
+
+    function musicPlay() {
+      musicAudio.src = playlist[musicIdx];
+      musicAudio.play();
+      musicPlaying = true;
+      musicUpdateUI();
+    }
+
+    function musicToggle() {
+      if (!musicPlaying) {
+        if (musicAudio.src && !musicAudio.ended) {
+          musicAudio.play();
+        } else {
+          musicAudio.src = playlist[musicIdx];
+          musicAudio.play();
+        }
+        musicPlaying = true;
+      } else {
+        musicAudio.pause();
+        musicPlaying = false;
+      }
+      musicUpdateUI();
+    }
+
+    function musicNext() {
+      musicIdx = (musicIdx + 1) % playlist.length;
+      if (musicPlaying) { musicPlay(); } else { musicUpdateUI(); }
+    }
+
+    function musicPrev() {
+      musicIdx = (musicIdx - 1 + playlist.length) % playlist.length;
+      if (musicPlaying) { musicPlay(); } else { musicUpdateUI(); }
+    }
+
+    musicAudio.addEventListener('ended', function() {
+      musicIdx = (musicIdx + 1) % playlist.length;
+      musicPlay();
+    });
+
+    musicUpdateUI();
+
+    /* ===== CAPTCHA ===== */
+    var currentCaptcha = '';
+    function generateCaptcha() {
+      var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', code = '';
+      for (var i = 0; i < 5; i++) code += chars.charAt(Math.floor(Math.random() * chars.length));
+      currentCaptcha = code;
+      document.getElementById('captcha-display').textContent = code;
+      document.getElementById('captcha-input').value = '';
+    }
+    generateCaptcha();
+
+    /* ===== MESSAGE FORM ===== */
+    var FORM_ENDPOINTS = {
+      formsubmit: 'https://formsubmit.co/ajax/8cc62c0409fb3246feadc021238a5807',
+      formspree: '', web3forms: ''
+    };
+    var COOLDOWN_MS = 120000, lastSendTime = 0;
+
+    async function trySend(name, message) {
+      if (FORM_ENDPOINTS.formsubmit) {
+        try {
+          var r1 = await fetch(FORM_ENDPOINTS.formsubmit, {
+            method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ name: name, message: message, _subject: 'Сообщение с визитки Klonvision' })
+          });
+          if (r1.ok) return true;
+        } catch(e) {}
+      }
+      if (FORM_ENDPOINTS.formspree) {
+        try {
+          var r2 = await fetch(FORM_ENDPOINTS.formspree, {
+            method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ name: name, message: message })
+          });
+          if (r2.ok) return true;
+        } catch(e) {}
+      }
+      if (FORM_ENDPOINTS.web3forms) {
+        try {
+          var r3 = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ access_key: FORM_ENDPOINTS.web3forms, name: name, message: message, subject: 'Сообщение с визитки Klonvision' })
+          });
+          if (r3.ok) return true;
+        } catch(e) {}
+      }
+      return false;
+    }
+
+    function startCooldownTimer() {
+      var btn = document.getElementById('send-btn');
+      var remaining = COOLDOWN_MS - (Date.now() - lastSendTime);
+      if (remaining <= 0) { btn.disabled = false; btn.textContent = 'Отправить'; return; }
+      btn.disabled = true;
+      var sec = Math.ceil(remaining / 1000), m = Math.floor(sec / 60), s = sec % 60;
+      btn.textContent = 'Подожди ' + m + ':' + String(s).padStart(2, '0');
+      setTimeout(startCooldownTimer, 1000);
+    }
+
+    async function sendMessage() {
+      var nameEl = document.getElementById('msg-name'), msgEl = document.getElementById('msg-text');
+      var captchaInput = document.getElementById('captcha-input');
+      var status = document.getElementById('form-status'), btn = document.getElementById('send-btn');
+      if (!nameEl.value.trim() || !msgEl.value.trim()) {
+        status.className = 'form-status error'; status.textContent = 'Заполни оба поля'; status.style.display = 'block'; return;
+      }
+      if (captchaInput.value.trim().toUpperCase() !== currentCaptcha) {
+        status.className = 'form-status error'; status.textContent = 'Неверный код. Попробуй ещё раз'; status.style.display = 'block'; generateCaptcha(); return;
+      }
+      var now = Date.now();
+      if (now - lastSendTime < COOLDOWN_MS) {
+        status.className = 'form-status error';
+        status.textContent = 'Подожди ещё ' + Math.ceil((COOLDOWN_MS - (now - lastSendTime)) / 60000) + ' мин.';
+        status.style.display = 'block'; return;
+      }
+      btn.disabled = true; btn.textContent = 'Отправляю...'; status.style.display = 'none';
+      var ok = await trySend(nameEl.value.trim(), msgEl.value.trim());
+      if (ok) {
+        lastSendTime = Date.now();
+        status.className = 'form-status success'; status.textContent = 'Отправлено! Спасибо, я свяжусь с тобой.';
+        status.style.display = 'block'; nameEl.value = ''; msgEl.value = ''; captchaInput.value = '';
+        generateCaptcha(); startCooldownTimer();
+      } else {
+        status.className = 'form-status error'; status.textContent = 'Не удалось отправить. Попробуй позже или напиши напрямую.';
+        status.style.display = 'block'; btn.disabled = false; btn.textContent = 'Отправить';
+      }
+      var content = document.getElementById('block-message').querySelector('.expand-content');
+      content.style.maxHeight = content.scrollHeight + 200 + 'px';
+    }
+  </script>
+</body>
+</html>
